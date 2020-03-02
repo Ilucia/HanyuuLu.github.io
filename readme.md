@@ -1,4 +1,6 @@
-# blog source
- This is the source for my github.io pages
+# HanyuuLu's personal pages
+![CI](https://github.com/HanyuuLu/HanyuuLu.github.io/workflows/CI/badge.svg?branch=src)
+![LICENSE](https://img.shields.io/github/license/HanyuuLu/HanyuuLu.github.io)
+![UPDATE](https://img.shields.io/github/last-commit/HanyuuLu/HanyuuLu.github.io/src)
 
- > [HanyuuLu.github.io](https://hanyuuLu.github.io)
+* CICD powered by [GitHub Action](https://github.com/HanyuuLu/HanyuuLu.github.io/actions?query=workflow%3ACI)
