@@ -6,6 +6,10 @@ tags:
 - Github
 ---
 
+
+
+<iframe width="1080px" height="600px" src="//player.bilibili.com/player.html?aid=92987568&cid=158758069&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 # 关于DevOps和CICD
 
 ## 一些前置名词介绍
