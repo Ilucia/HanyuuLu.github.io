@@ -5,6 +5,7 @@ tags:
 - outer link
 ---
 # Tech guide
+
 ## Coding
 
 * [leetcode](leetcode.com)
@@ -143,4 +144,4 @@ tags:
 
 > [*:These were not accessible because of GFW. : ( ]
 >
-> 由旧版本主页迁移而来，访问旧版本主页：https://hanyuufurude.github.io/HanyuuFurude.github.io_2018Version/
+> 由旧版本主页迁移而来，

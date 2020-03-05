@@ -3,7 +3,6 @@ title: Keras简单样例代码
 date: 2019-02-26 20:30:33
 tags:
 ---
-> 🚧正在施工中……🚧
 ``` py
 # https://tensorflow.google.cn/guide/keras
 import numpy as np

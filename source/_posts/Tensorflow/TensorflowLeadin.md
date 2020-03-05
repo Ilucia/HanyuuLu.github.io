@@ -13,6 +13,7 @@ matrix2 = tf.constant([[2.],[2.]])
 product = tf.matmul(matrix1,matrix2)  # create a matlum op(operation)
 ```
 ### Launching the graph in a session 在图中开启一个会话
+
 ```py
 sess = tf.Session()  # create a session in tensorflow
 result = sess.run(product)

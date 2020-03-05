@@ -29,17 +29,17 @@ tags:
   * 运维
     * 发布、部署和维护
   * 早期的软件交付模型：瀑布模型（Waterfall）模型
-  * ![image-20200301004205120](cicd/image-20200301004205120.png)
+  * ![image-20200301004205120](/cicd/image-20200301004205120.png)
   * 缺点
     * 反应迟缓、流程越往后走更改需求带来的额外成本急速上升
 
 * DevOps
 
-  ![image-20200301004643842](cicd/image-20200301004643842.png)
+  ![image-20200301004643842](/cicd/image-20200301004643842.png)
 
   * Development & Operations
   * DevOps是一组过程、方法与系统的统称，用于促进**开发**、**技术运营**和**质量保障（QA）**部门之间的沟通、协作与整合。
-  * ![image-20200301004839838](cicd/image-20200301004839838.png)
+  * ![image-20200301004839838](/cicd/image-20200301004839838.png)
 
   * 从目标来看，DevOps就是让开发人员和运维人员更好地沟通合作，通过自动化流程来使得软件整体过程更加快捷和可靠。
 
@@ -47,7 +47,7 @@ tags:
 
   * DevOps的实施，促进开发和运维人员的沟通，增进彼此的理解。
 
-  * ![image-20200301005236933](cicd/image-20200301005236933.png)
+  * ![image-20200301005236933](/cicd/image-20200301005236933.png)
 
     
 
@@ -57,7 +57,7 @@ tags:
 
 ## UI
 
-![Annotated workflow run image](cicd/annotated-workflow.png)
+![Annotated workflow run image](/cicd/annotated-workflow.png)
 
 ## Creating a workflow file
 
@@ -105,7 +105,7 @@ You can configure a workflow to start once:
 
 To help you get started, this guide shows you some basic examples. For the full GitHub Actions documentation on workflows, see "[Configuring workflows](https://help.github.com/articles/configuring-workflows)."
 
-![image-20200301143401814](cicd/image-20200301143401814.png)
+![image-20200301143401814](/cicd/image-20200301143401814.png)
 
 ### Customizing when workflow runs are triggered
 

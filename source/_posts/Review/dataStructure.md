@@ -314,14 +314,14 @@ int KmpSearch(char* s, char* p)
 3. 根据next数组进行匹配
 
 	匹配失配，$j=next[j]$，模式串向右移动的位数为：$j-next[j]$。换言之，当模式串的后缀$pj-kpj-k+1,...,pj-1$跟文本串$si-ksi-k+1,...,si-1$匹配成功，但$pj$跟$si$匹配失败时，因为$next[j]=k$，相当于在不包含pj的模式串中有最大长度为k的相同前缀后缀，即$p0p1...pk-1=pj-kpj-k+1...pj-1$，故令$j=next[j]$，从而让模式串右移$j-next[j]$位，使得模式串的前缀$p0p1,...,pk-1$对应着文本串$si-ksi-k+1,...,si-1$，而后让$pk$跟$s$i继续匹配。如下图所示：
-	​	![](/dataStructure/0000.jpg){% asset_img 0000.jpg %}
+	​	![](数据结构小结/0000.jpg){% asset_img 0000.jpg %}
 
 ### 解释
 * 寻找最长前缀后缀
-	*  如果给定的模式串是：“ABCDABD”，从左至右遍历整个模式串，其各个子串的前缀后缀分别如下表格所示： ![](/dataStructure/0001.jpg){% asset_img 0001.jpg %}
+	*  如果给定的模式串是：“ABCDABD”，从左至右遍历整个模式串，其各个子串的前缀后缀分别如下表格所示： ![](数据结构小结/0001.jpg){% asset_img 0001.jpg %}
 
    也就是说，原模式串子串对应的各个前缀后缀的公共元素的最大长度表为：
-![](/dataStructure/0002.jpg){% asset_img 0002.jpg %}
+![](数据结构小结/0002.jpg){% asset_img 0002.jpg %}
 
 ``` cpp
 void GetNext(char* p,int next[])
