@@ -1,11 +1,11 @@
 ---
 title: 高级数据结构复习
 date: 2019-06-10 19:59:55
-cover:
 tags:
 	- advanced data structures
 	- review
 categories:
+	- course
 ---
 
 # 平摊分析与基本思路
