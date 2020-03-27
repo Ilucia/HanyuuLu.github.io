@@ -96,7 +96,7 @@ categories: review
 
 - 通信系统
 
-  ![](/review/ComputerNetwork/1556351816229.png)
+  ![](/Review/ComputerNetwork/1556351816229.png)
 
   ![](ComputerNetwork/1556351816229.png)
 
@@ -118,7 +118,7 @@ categories: review
     - Nyquist Sampling Theorem
       - 最大频率为 F 的模拟信号 被不失真还原的前提条件是 取样频率不低于 2F
 
-    ![](/review/ComputerNetwork/1556351961286.png)
+    ![](/Review/ComputerNetwork/1556351961286.png)
 
     ![](ComputerNetwork/1556351961286.png)
 
@@ -159,13 +159,13 @@ categories: review
 
   - 频分多路复用FDM
 
-    ![](/review/ComputerNetwork/1556353561848.png)
+    ![](/Review/ComputerNetwork/1556353561848.png)
 
     ![](ComputerNetwork/1556353561848.png)
 
   - 时分多路复用TDM
 
-    ![](/review/ComputerNetwork/1556354440149.png)
+    ![](/Review/ComputerNetwork/1556354440149.png)
 
     ![](ComputerNetwork/1556354440149.png)
 
@@ -183,7 +183,7 @@ categories: review
 
 - OSI/RM模型
 
-  ![](/review/ComputerNetwork/1556355803934.png)
+  ![](/Review/ComputerNetwork/1556355803934.png)
 
   ![](ComputerNetwork/1556355803934.png)
 
@@ -197,7 +197,7 @@ categories: review
 
 - 层间通信
 
-  ![](/review/ComputerNetwork/1556355974514.png)
+  ![](/Review/ComputerNetwork/1556355974514.png)
 
   ![](ComputerNetwork/1556355974514.png)
 
@@ -226,7 +226,7 @@ categories: review
 
       **只有局域网的数据链路层进行了子层划分**
 
-      ![](/review/ComputerNetwork/1556356353269.png)
+      ![](/Review/ComputerNetwork/1556356353269.png)
 
       ![](ComputerNetwork/1556356353269.png)
 
@@ -322,7 +322,7 @@ categories: review
         - 令牌+优先级
       - 环中继转发器RPU
 
-      ![](/review/ComputerNetwork/1556363091360.png)
+      ![](/Review/ComputerNetwork/1556363091360.png)
 
       ![](ComputerNetwork/1556363091360.png)
 
@@ -354,11 +354,11 @@ categories: review
 
   - 提供预约带宽机制 
 
-  - ![](/review/ComputerNetwork/1556363549316.png)
+  - ![](/Review/ComputerNetwork/1556363549316.png)
 
   - ![](ComputerNetwork/1556363549316.png)
 
-    ![](/review/ComputerNetwork/1556363560059.png)
+    ![](/Review/ComputerNetwork/1556363560059.png)
 
     ![](ComputerNetwork/1556363560059.png)
 
@@ -382,14 +382,14 @@ categories: review
 
       - 网络层及以下
 
-        ![](/review/ComputerNetwork/1556363746418.png)
+        ![](/Review/ComputerNetwork/1556363746418.png)
         ![](ComputerNetwork/1556363746418.png)
     
     - 转发器(Repeater, 中继器、集线器)
     
       - 互连仅在物理层及其下层(传输媒体)存在 差异的网络，延伸网段、改变传输媒体，实现网段之间的电气信号的接收和再生
     
-        ![](/review/ComputerNetwork/1556364033375.png)
+        ![](/Review/ComputerNetwork/1556364033375.png)
     
         ![](ComputerNetwork/1556364033375.png)
     
@@ -399,11 +399,11 @@ categories: review
     
       - 用于互连两个独立的子网，实现信息帧的存储 转发，工作在物理层和数据链路层
     
-        ![](/review/ComputerNetwork/1556364951498.png)
+        ![](/Review/ComputerNetwork/1556364951498.png)
     
         ![](ComputerNetwork/1556364951498.png)
     
-        ![](/review/ComputerNetwork/1556364980729.png)
+        ![](/Review/ComputerNetwork/1556364980729.png)
     
         ![](ComputerNetwork/1556364980729.png)
     
@@ -469,7 +469,7 @@ categories: review
     
       - 网桥、交换机根据帧的宿地址和映射表，不作修改地交换至输出端口(同构网络)， 交换对象为帧
     
-        ![](/review/ComputerNetwork/1556365920581.png)
+        ![](/Review/ComputerNetwork/1556365920581.png)
     
         ![](ComputerNetwork/1556365920581.png)
     
@@ -479,11 +479,11 @@ categories: review
     
       - 三层交换机：简化的路由器，二层功能+IP路由，效率高 
     
-        ![](/review/ComputerNetwork/1556365948385.png)
+        ![](/Review/ComputerNetwork/1556365948385.png)
     
         ![](ComputerNetwork/1556365948385.png)
         
-        ![](/review/ComputerNetwork/1556432398325.png)
+        ![](/Review/ComputerNetwork/1556432398325.png)
         
         ![](ComputerNetwork/1556432398325.png)
   
@@ -501,7 +501,7 @@ categories: review
 
 -   Internet
 
-    ![](/review/ComputerNetwork/1556434036918.png)
+    ![](/Review/ComputerNetwork/1556434036918.png)
 
     ![](ComputerNetwork/1556434036918.png)
 
