@@ -5,7 +5,7 @@ tags:
 	- compilation principle
 	- course
 categories:
-	- course
+	- review
 ---
 [TOC]
 # Chapter 1
@@ -624,6 +624,7 @@ digit  [0-9]
     ![image-20200109031046017](CompilationPrinciple/image-20200109031046017.png)
 
   * Definition of operator grammar
+    
     * The grammar has the property that no production right side is e or has two adjacent non-terminals
 
 * LR parsing

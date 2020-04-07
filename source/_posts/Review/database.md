@@ -5,7 +5,7 @@ tags:
 	- database
 	- review
 categories:
-	-  course
+	- review
 ---
 
 # PL/SQL

@@ -3,8 +3,9 @@ title: 数据结构小结
 date: 2019-01-08 11:47:06
 tags: 
     - data sturcture
+categories:
+	- review
 ---
-# 数据结构 ![](https://img.shields.io/github/license/HanyuuFurude/HanyuuFurude.github.io.svg)
 ## 性能度量
 > 算法的时间复杂度和空间复杂度合称为算法的复杂度。
 ### 时间复杂度

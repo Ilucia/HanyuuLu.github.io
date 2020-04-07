@@ -5,7 +5,7 @@ tags:
 	- advanced data structures
 	- review
 categories:
-	- course
+	- review
 ---
 
 # 平摊分析与基本思路

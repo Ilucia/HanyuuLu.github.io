@@ -5,7 +5,8 @@ date: 2020-03-11 23:03:06
 tags: 
 	- sensor
 	- review
-categories: review
+categories:
+	- review
 ---
 # Chapter 1
 

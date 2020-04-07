@@ -1,7 +1,11 @@
 ---
 title: Software Engineering Review
 date: 2019-01-13 13:16:18
-tags: SE, Software Engineering, review
+tags:
+	-  software engineering 
+	- review
+categories:
+	- review
 ---
 
 # Chapter 00 Intorduction

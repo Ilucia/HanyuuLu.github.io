@@ -1,7 +1,10 @@
 ---
 title: Java 复习提纲
 date: 2019-01-10 00:00:00
-tags: Java
+tags: 
+	- Java
+categories:
+	- review
 ---
 * 垃圾回收 `System.gc()`
 ## Chapter 01
@@ -19,6 +22,7 @@ float|32|$3.4*10^{38}$|Long
 double|64|$1.7*10^{308}$|Double
 void|-|-|Void
 * 自动类型转换
+  
   * byte,short,char—> int —> long—> float —> double
 * 数据类型转换`int a = (int)3.14159`
 * Package
@@ -203,12 +207,18 @@ Java 接口
 	  int  res = fis.read();	//IOException
 	  fis.available();	//是否可用
 	  fis.close();
+	  ```
+	```
+	
 	```
 * FileOutputStream
   * ``` java
   	file.createNewFile()
 	fos.write(2);
 	fos.write('a');
+		```
+	```
+	
 	```
 * FileReader
 * FileWriter
@@ -223,11 +233,12 @@ Java 接口
 * DataInputStream, DataOutputStream
 * PrintWriter
 * Scanner
+  
   * java.util.Scanner
 * BufferedInputStream, BufferedOutputStream
   * `BufferedInputStream bufferedInput = new BufferedInputStream(new FileInputStream(filename));`
   * ``` java
-	public void testBufferedInput() {
+	  public void testBufferedInput() {
     try {
         /**
          * 建立输入流 BufferedInputStream, 缓冲区大小为8
@@ -250,8 +261,9 @@ Java 接口
     } catch (Exception e) {
         e.printStackTrace();
     }
-	}
-	```
+	  }
+	  ```
+  ```
   * InputStreamReader
   * OutputStreamReader
   * System.in
@@ -259,6 +271,7 @@ Java 接口
   * System.err
   * DataOutputStream
   * DataInputStream
+  ```
 
 ## Chapter 05 Collection
 * Arrays
@@ -327,6 +340,7 @@ Java 接口
   * `JComboBox`
   * `JCheckBox`
   * `JPanel`
+    
     * `pnel.setLayout(new FLowLayout(FlowLayout.LEFT));`
   * `JPanel //container`
     * `JPanle = new JPanel();`
@@ -435,9 +449,11 @@ Java 接口
   * `SELECT * FROM tableA ORDER BY name DESC/ASC`
   * `SELECT COUNT(DISTINCT name) FROM tableA`
 * Insert
+  
   * `INSERT INTO tableA (name,Date) VALUES ('Inari','Jan-01-2019')`
 * Retireval
 * Update
+  
   * `UPDATE tableA SET date = 'Jan-01-2019' WEHERE name = 'Hanyuu'`
 * Delete
   * `DELETE FROM tableA WHERE name = 'Inari'`
@@ -489,6 +505,7 @@ Java 接口
   		}
   	}
   }
+  ```
 * 构建Prepared statement
   ``` java
   String sql = "INSERT INTO tableA (id,name,sorce) VALUES (?,?,?)";

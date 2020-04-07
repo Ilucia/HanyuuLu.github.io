@@ -5,7 +5,7 @@ tags:
 	- Java
 	- GC
 categories:
-	- Review
+	- review
 ---
 
 # GC

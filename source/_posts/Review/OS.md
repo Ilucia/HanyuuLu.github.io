@@ -6,7 +6,8 @@ cover: https://raw.githubusercontent.com/HanyuuFurude/TechBlog/master/res/rm.png
 tags: 
 	- os
 	- review
-categories: review
+categories:
+	- review
 ---
 [TOC]
 

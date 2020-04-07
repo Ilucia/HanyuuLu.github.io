@@ -5,7 +5,8 @@ cover: https://raw.githubusercontent.com/HanyuuFurude/TechBlog/master/res/rm.png
 tags: 
 	- network
 	- review
-categories: review
+categories:
+	- review
 ---
 [TOC]
 
@@ -657,5 +658,3 @@ categories: review
 
 -   简单网络管理协议SNMP
     -   协议数据单元PDU
-    
-        🚧稍后继续🚧
