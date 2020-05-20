@@ -13,6 +13,9 @@ tags:
 
 GitHub地址：[https://github.com/microsoft/terminal](https://github.com/microsoft/terminal)
 
+*   主题推荐 GitHub地址：[https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal](https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal)
+*   笔者自己配的主题：[https://github.com/HanyuuLu/toolbox/tree/master/poshTheme](https://github.com/HanyuuLu/toolbox/tree/master/poshTheme)
+
 ## Fluent Terminal
 
 GitHub地址：[https://github.com/felixse/FluentTerminal](https://github.com/felixse/FluentTerminal)
