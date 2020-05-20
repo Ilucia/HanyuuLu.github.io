@@ -7,12 +7,26 @@ tags:
     - oh-my-posh
 ---
 
-# Fluent Terminal
-官方github地址：
-[https://github.com/felixse/FluentTerminal](https://github.com/felixse/FluentTerminal)\
-安装方法详见github仓库readme（复制粘贴没意思）。
-# oh-my-posh
-## 安装
+# 终端（Terminal）推荐
+
+## Windows Terminal
+
+GitHub地址：[https://github.com/microsoft/terminal](https://github.com/microsoft/terminal)
+
+## Fluent Terminal
+
+GitHub地址：[https://github.com/felixse/FluentTerminal](https://github.com/felixse/FluentTerminal)
+
+## Cmder
+
+GitHub地址：https://github.com/cmderdev/cmder
+
+# PowerShell 美化
+
+## oh-my-posh
+
+### 安装
+
 * 若您从未更改过powershell的执行权限（或者不知道此物为何物），则需要更改powershell的执行权限以运行脚本
 * 需要管理员权限
 ``` powershell
@@ -26,20 +40,26 @@ Install-Module posh-git -Scope CurrentUser
 ``` powershell
 Install-Module oh-my-posh -Scope CurrentUser
 ```
-## 启用
-### 手动启动
+### 启用
+
+#### 手动启动
+
 ``` powershell
 Import-Module oh-my-posh    # 导入模块
 Set-Theme Paradox   # 使用Paradox主题
 ```
-### 伴随powershell自启
+#### 伴随powershell自启
+
 如果$profile指向的文件存在，则powershell启动时会顺带启动$profile指向的脚本，所以我们将上述语句写入该文件中
 ``` powershell
 New-Item $PROFILE -Type File    # 创建文件，若提示文件已存在则可以直接编辑文件
 "Import-Module oh-my-posh    # 导入模块" >> $PROFILE
 "Set-Theme Paradox   # 使用Paradox主题" >> $PROFILE
 ```
-# 更纱黑体
+# 字体更换
+
+## 更纱黑体
+
 常规字体是没有办法完全显示oh-my-posh的powerline字符的，因此我们需要一种好看的powerline字符
 * 笔者在此安利Sarasa Gothic / 更纱黑体 / 更紗黑體 / 更紗ゴシック
 微软应用商店[下载](https://www.microsoft.com/store/productId/9MW0M424NCZ7)
