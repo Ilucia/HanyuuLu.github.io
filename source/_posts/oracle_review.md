@@ -6,7 +6,223 @@ tag:
   - database
 ---
 
-# Oracle数据库结构 
+[toc]
+
+# Introduction
+
+![image-20200620153013639](oracle_review/image-20200620153013639.png)
+
+## Instance
+
+p10
+
+An Oracle instance: 
+
+*   Is a means to access an Oracle database
+*   Always opens one and only one database
+*   Consists of memory and process structures
+
+## Database
+
+p12
+
+An Oracle database: 
+
+*   Is a collection of data that is treated as a unit
+*   Consists of three file types
+    *   Data files
+    *   Control files
+    *   Redo log files
+
+## Physical Structure
+
+p13
+
+The physical structure of an Oracle database is determined by the operating system files that provide the actual physical storage for database information. 
+
+*   Control files
+*   Data files(includes data dictionary)
+*   Redo log files
+
+## Memory Structure
+
+P14
+
+Oracle’s memory structure consists of two memory areas known as:
+
+### SGA
+
+System Global Area (SGA): Allocated at instance startup, and is a fundamental component of an Oracle Instance
+
+*    The SGA consists of several memory structures:
+    *   Shared pool
+    *   Database buffer cache
+    *   Redo log buffer
+    *   Other structures (e.g. lock and latch management, statistical data) 
+*   There are two optional memory structures that can be configured within the SGA:
+    *   Large pool
+    *   Java pool
+
+*   SGA is dynamic and sized using SGA_MAX_SIZE. 
+*   SGA memory allocated and tracked in granules by SGA components
+    *   Contiguous virtual memory allocation
+    *   Size based on SGA_MAX_SIZE
+
+#### Shared Pool
+
+The shared pool is used to store the most recently executed SQL statements and the most recently used data definitions.
+
+*   It consists of two key performance-related memory structures: 
+    *   Library cache
+    *   Data dictionary cache
+*   Sized by the parameter SHARED_POOL_SIZE.
+
+#### Library Cache
+
+The library cache stores information about the most recently used SQL and PL/SQL statements. The library cache:
+
+*   Enables the sharing of commonly used statements
+*   Is managed by a least recently used (LRU) algorithm
+*   Consists of two structures:
+    *   Shared SQL area
+    *   Shared PL/SQL area
+*   Has its size determined by the shared pool sizing
+
+#### Data Dictionary Cache
+
+*   The data dictionary cache is a collection of the most recently used definitions in the database.
+    *   It includes information about database files, tables, indexes, columns, users, privileges, and other database objects.
+    *   During the parse phase, the server process looks at the data dictionary for information to resolve object names and validate access.
+    *   Caching the data dictionary information into memory improves response time on queries.
+    *   Size is determined by the shared pool sizing.
+
+#### Database Buffer Cache 
+
+The database buffer cache stores copies of data blocks that have been retrieved from the data files. • It enables great performance gains when you obtain and update data.
+
+*   It is managed through a least recently used (LRU) algorithm.
+*   DB_BLOCK_SIZE determines the primary block size.
+
+#### Redo Log Buffer Cache
+
+The redo log buffer cache records all changes made to the database data blocks.
+
+*   Its primary purpose is recovery.
+*   Changes recorded within are called redo entries.
+*   Redo entries contain information to reconstruct or redo changes.
+*   Size is defined by LOG_BUFFER.
+
+#### Large Pool
+
+The large pool is an optional area of memory in the SGA configured only in a shared server environment. 
+
+*   It relieves the burden placed on the shared pool. 
+
+*   This configured memory area is used for session memory (UGA), I/O slaves, and backup and restore operations.
+
+*   Unlike the shared pool, the large pool does not use an LRU list.
+
+*   Sized by LARGE_POOL_SIZE. 
+
+    `ALTER SYSTEM SET LARGE_POOL_SIZE = 64M;`
+
+#### Java Pool
+
+The Java pool services the parsing requirements for Java commands.
+
+*   Required if installing and using Java.
+*   It is stored much the same way as PL/SQL in database tables.
+*   It is sized by the JAVA_POOL_SIZE parameter.
+
+### PGA
+
+p25
+
+Program Global Area (PGA): Allocated when the server process is started
+
+The PGA is memory reserved for each user process that connects to an Oracle database
+
+#### Process Structure
+
+An Oracle process is a program that depending on its type can request information, execute a series of steps, or perform a specific task.
+
+Oracle takes advantage of various types of processes: 
+
+*   User process: Started at the time a database user requests connection to the Oracle server
+
+    *   A user process is a program that requests interaction with the Oracle server. 
+        *   It must first establish a connection.
+        *   It does not interact directly with the Oracle server.
+
+*   Server process: Connects to the Oracle Instance and is started when a user establishes a session.
+
+    A server process is a program that directly interacts with the Oracle server.
+
+    *   It fulfills calls generated and returns results.
+    *   Can be dedicated or shared server.
+
+*   Background process: Available when an Oracle instance is started
+
+    The relationship between the physical and memory structures is maintained and enforced by Oracle’s background processes
+
+    *   Mandatory background processes
+        *   DBWn PMON CKPT LGWR SMON RECO P29
+    *   Optional background processes
+        *   ARCn LMON Snnn QMNn LMDn CJQ0 Pnnn LCKn Dnnn P35
+
+## Logical Structure
+
+The logical structure of the Oracle architecture dictates how the physical space of a database is to be used.
+
+A hierarchy exists in this structure that consists of tablespaces, segments, extents, and blocks.
+
+![image-20200620220533075](oracle_review/image-20200620220533075.png)
+
+## Processing a SQL Statement
+
+*   Connect to an instance using:
+    *   The user process
+    *   The server process
+*   The Oracle server components that are used depend on the type of SQL statement: 
+    *   Queries return rows.
+    *   DML statements log changes.
+    *   Commit ensures transaction recovery. 
+*   Some Oracle server components do not participate in SQL statement processing.
+
+# Oracle Server
+
+## Database Administration Tools
+
+P42
+
+# Managing Oracle Instances
+
+p60
+
+## Initialization Parameter Files
+
+![image-20200620223657340](oracle_review/image-20200620223657340.png)
+
+*   Entries are specific to the instance being accessed
+*   There are two kinds of parameters:
+    *   Explicit: Having an entry in the file
+    *   Implicit: No entry within the file, but assuming the Oracle default values
+*   Multiple files can be used for a single database to optimize performance in different situations.
+*   Changes to entries in the file take effect based on the type of initialization parameter file used;
+    *   Static parameter file, PFILE
+    *   Persistent parameter file, SPFILE
+
+### PFILE initSID.ora 
+
+*   The PFILE is a text file that can be modified with an operating system editor. 
+*   Modifications to the file are made manually.
+*   Changes to the file take effect on the next startup. • Its default location is $ORACLE_HOME/dbs.
+
+---
+
+
+
+# Oracle数据库结构
 
 它由至少一个表空间和数据库模式对象组成。这里，模式是对象的集合，而模式对象是直接引用数据库数据的逻辑结构。模式对象包括这样一些结构:表、视图、序列、存储过程、同义词、索引、簇和数据库链等。逻辑存储结构包括表空间、段和范围，用于描述怎样使用数据库的物理空间。
 
