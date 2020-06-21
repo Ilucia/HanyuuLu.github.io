@@ -342,6 +342,127 @@ p78
 
 ![image-20200621194559674](oracle_review/image-20200621194559674.png)
 
+### Managing an Instance by Monitoring Diagnostic Files
+
+p81
+
+### Alert Log File
+
+The alertSID.log file records the commands and Results of major events while the database is operational.
+
+### Background Trace Files
+
+Background trace files support information errors detected by any background process.
+
+### User Trace File
+
+A user trace file is produced by the user process connected to the Oracle server through the server process.
+
+# Create Database
+
+p88
+
+## Creation Prerequisites
+
+p91
+
+To create a new database, you must have the following:
+
+*   A privileged account authenticated in one of the following ways:
+    *   By the operating system
+    *   Using a password file
+*   Sufficient memory to start the instance
+*   Sufficient disk space for the planned database
+
+## Planning Database File Locations
+
+## Creating a Database
+
+p93
+
+base can be created using:
+
+*   Oracle Database Configuration Assistant
+*   The CREATE DATABASE command An Oracle datab
+
+## Operating System Environment
+
+### PATH
+
+```
+ORACLE_BASE
+ORACLE_HOME
+ORACLE_SID
+ORA_NLS33
+PATH
+sLD_LIBRARY_PATH
+```
+
+##  Database Configuration Assistant
+
+p95
+
+## Database Information
+
+p97
+
+Specify: 
+
+*   Global database name and SID
+*   The features you want to use for your database, such as:
+    *   Oracle Spatial
+    *   Oracle OLAP Services
+    *   Example Schemas
+*   Mode in which you want the database to operate
+    *   Dedicated server mode
+    *   Shared server mode
+
+## Other Parameters
+
+*   Archive Parameters
+    *   Use for database recovery
+    *   May also be used for a standby database
+*   Data Block Sizing
+    *   Sets the default database block size
+    *   Helps to determine the SORT_AREA_SIZE
+*   File Locations
+    *   Specify paths for trace files
+    *   Specify paths for parameter files
+    *   Database storage – Specify storage parameters
+
+## Creating a Database Manually
+
+p101
+
+*   Decide on a unique instance and database name 
+*   Choose a database character set 
+*   Set the operating system variables
+*   Edit / Create the initialization parameter file
+*   Start the instance (nomount) 
+*   Execute the CREATE DATABASE command
+*   Run scripts to generate the data dictionary and accomplish post creation steps
+
+### Preparing the Parameter File
+
+### Creating SPFILE
+
+### Starting the Instance
+
+### Creating the Database
+
+### Creating a Database Using OMF
+
+### After Database Creation
+
+The database contains:
+
+*   Datafiles, control files, and redo log files
+*   User SYS with the password change_on_install
+*   User SYSTEM with the password manager
+*   Internal tables (but no data dictionary views)
+
+# Data Dictionary Contents and Usage
+
 
 
 ---
