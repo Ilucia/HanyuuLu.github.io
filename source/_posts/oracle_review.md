@@ -172,6 +172,8 @@ Oracle takes advantage of various types of processes:
 
 ## Logical Structure
 
+p36
+
 The logical structure of the Oracle architecture dictates how the physical space of a database is to be used.
 
 A hierarchy exists in this structure that consists of tablespaces, segments, extents, and blocks.
@@ -212,11 +214,135 @@ p60
     *   Static parameter file, PFILE
     *   Persistent parameter file, SPFILE
 
-### PFILE initSID.ora 
+### PFILE initSID.ora
 
 *   The PFILE is a text file that can be modified with an operating system editor. 
+
 *   Modifications to the file are made manually.
+
 *   Changes to the file take effect on the next startup. • Its default location is $ORACLE_HOME/dbs.
+
+*   example
+
+    ```
+    # Initialization Parameter File: initdb01.ora
+    db_name = db01
+    instance_name = db01
+    control_files = ( /u03/oradata/db01/control01db01.ctl,
+    /u03/oradata/db01/control02db01.ctl)
+    db_block_size = 4096
+    db_block_buffers = 500
+    shared_pool_size = 31457280 # 30M Shared Pool
+    db_files = 1024
+    max_dump_file_size = 10240
+    background_dump_dest = /u05/oracle9i/admin/db01/bdump
+    user_dump_dest = /u05/oracle9i/admin/db01/udump
+    core_dump_dest = /u05/oracle9i/admin/db01/cdump
+    undo_management = auto
+    undo_tablespace = undtbs
+    
+    ```
+
+### SPFILE spfileSID.ora
+
+p66
+
+*   Binary file with the ability to make changes persistent across shutdown and startup 
+
+*   Maintained by the Oracle server
+
+*   Records parameter value changes made with the ALTER SYSTEM command
+
+*   Can specify whether the change being made is temporary or persistent
+
+*   Values can be deleted or reset to allow an instance to revert to the default value 
+
+    `ALTER SYSTEM SET undo_tablespace = 'UNDO2';`
+
+*   SPFILE can be created from an initSID.ora file using the CREATE SPFILE command, which can be executed before or after instance startup:
+
+    ``` CREATE SPFILE FROM PFILE;```
+
+*   example
+
+    ```
+    *.background_dump_dest='$ORACLE_HOME/admin/db01/bdump'
+    *.compatible='9.0.0'
+    *.control_files='/u03/oradata/db01/ctrl01db01.ctl','/u03/orad
+    ata/db01/ctrl02db01.ctl'
+    *.core_dump_dest='$ORACLE_HOME/admin/db01/cdump'
+    *.db_block_buffers=500
+    *.db_block_size=4096
+    *.db_files=40
+    *.db_name='db01'
+    *.instance_name='db01'
+    *.remote_login_passwordfile='exclusive'
+    *.shared_pool_size=31457280 # 30M Shared Pool
+    *.undo_management='AUTO'
+    db01.undo_tablespace='UNDOTBS01'
+    db02.undo_tablespace='UNDOTBS02'
+    ```
+
+### Oracle Managed Files
+
+p69
+
+Oracle Managed Files (OMF) simplify file administration
+
+*   OMF are created and deleted by the Oracle server as directed by SQL commands
+*   OMF are established by setting two parameters:
+    *   DB_CREATE_FILE_DEST: Set to give the default location for data files 
+    *   DB_CREATE_ONLINE_LOG_DEST_N: Set to give the default locations for online redo logs and control files, up to a maximum of 5 locations
+
+## Starting Up a Database
+
+p73
+
+![image-20200621165731327](oracle_review/image-20200621165731327.png)
+
+### Start up the instance and open the database:
+
+```
+STARTUP
+STARTUP PFILE=$ORACLE_HOME/dbs/initdb01.ora
+```
+
+### The ALTER DATABASE Command
+
+*   Change the state of the database from NOMOUNT to MOUNT:
+
+```ALTER DATABASE db01 MOUNT;```
+
+*   Open the database as a read--only database:
+
+```ALTER DATABASE db01 OPEN READ ONLY;```
+
+### Opening a Database in Restricted Mode
+
+*   Use the STARTUP command to restrict access to a database:
+
+``` STARTUP RESTRICT```
+
+*   Use the ALTER SYSTEM command to place an instance in restricted mode:
+
+``` ALTER SYSTEM ENABLE RESTRICTED SESSION;```
+
+Opening a Database in Read-Only Mode
+
+*   A databases can be   opened as a read-only database.
+*   A read-only database can be used to:
+    *   Execute queries
+    *   Execute disk sorts using locally managed tablespaces
+    *   Take data files offline and online, not tablespaces
+    *   Perform recovery of offline data files and tablespaces
+
+### Shutting Down the Database
+
+p78
+
+![image-20200621194559674](oracle_review/image-20200621194559674.png)
+
+
 
 ---
 
