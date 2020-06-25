@@ -1,5 +1,5 @@
 ---
-title: 传感器复习提纲
+6title: 传感器复习提纲
 date: 2020-06-15 00:00:00
 tags:
 	- review
@@ -563,9 +563,12 @@ $$
 p123
 
 *   ![image-20200624012042318](review_sensor/image-20200624012042318.png)
-
+*   $U_H = \frac{1}{en}\cdot\frac{IB}{d}=R_H\frac{IB}{d}$
+    *   $R_H$霍尔系数
+*   $K_H=\frac{R_H}{d}=\frac{U_H}{IB}\ (V/A\cdot T)$
 *   应用
     *   微位移以及机械振动测量
+    *   TODO
 
 # Chapter 6 压电式传感器
 
