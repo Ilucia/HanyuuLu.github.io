@@ -465,6 +465,115 @@ The database contains:
 
 p110
 
+## Data Dictionary
+
+During database creation, the Oracle server creates additional object structures within the data files. 
+
+*   Data dictionary tables
+*   Dynamic performance tables
+
+The data dictionary is a set of read-only tables and views that record, verify, and provide information about its associated database.
+
+*   Describes the database and its objects
+*   Includes two types of objects:
+    *   Base tables
+        *   Store description of database
+        *   Created with CREATE DATABASE
+    *   Data Dictionary views
+        *   Summarize base table information
+        *   Created using catalog.sql script
+
+##  Contents
+
+p114
+
+## Usage
+
+## Data Dictionary View Categories
+
+## Dynamic Performance Tables
+
+# Maintaining the Control File
+
+p122
+
+The control file is a binary file that defines the current state of the physical database.
+
+*   Loss of the control file requires recovery
+*   Is read at MOUNT stage
+*   Is required to operate
+*   Is linked to a single database
+*   Should be multiplexed
+*   Maintains integrity of database
+*   Sized initially by CREATE DATABASE
+
+## Contents
+
+P125
+
+A control file contains the following entries:
+
+*   Database name and identifier
+*   Time stamp of database creation
+*   Tablespace names
+*   Names and locations of data files and redo log files
+*   Current redo log file sequence number
+*   Checkpoint information
+*   Begin and end of undo segments
+*   Redo log archive information • Backup information
+
+# Maintaining Redo Log Files
+
+p132
+
+## Managing Online Redo Logs with OMF
+
+p144
+
+## Archived Redo Log Files
+
+# Managing Tablespaces and Data files
+
+p150
+
+## Database Storage Hierarchy
+
+p153
+
+![image-20200628012952676](oracle_review/image-20200628012952676.png)
+
+## SYSTEM and Non-SYSTEM Tablespaces
+
+p154
+
+# Storage Structure and Relationships
+
+p179
+
+## Extent Allocation and Deallocation
+
+p185
+
+## Database Block
+
+## Database Block Contents
+
+## Data Dictionary Views
+
+p196
+
+![image-20200628013426264](oracle_review/image-20200628013426264.png)
+
+## Obtaining Storage Information
+
+# Managing Undo Data
+
+
+
+
+
+
+
 ---
 
 
