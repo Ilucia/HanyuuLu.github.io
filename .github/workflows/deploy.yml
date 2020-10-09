@@ -16,8 +16,8 @@ jobs:
       uses: sma11black/hexo-action@v1.0.0
       with:
         # Github user name
-        user_name: HanyuuLu # default is 
+        user_name: Ilucia # default is 
         # Github email
-        user_email: HanyuuFurude@outlook.com # default is 
+        user_email: ilucia_niu@163.com # default is 
         # The deploy key for Github Pages repo
         deploy_key: ${{ secrets.DEPLOY_KEY }}
