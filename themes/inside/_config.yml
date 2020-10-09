@@ -84,7 +84,7 @@ appearance:
 profile:
   # `email` is used for gravatar(https://en.gravatar.com),
   # fallback to `hexo.config.email` if not specified
-  email: HanyuuFurude@outlook.com
+  email: ilucia_niu@163.com
 
   # You can set Avatar URL directly
   avatar: https://avatars3.githubusercontent.com/u/24761242?s=460&v=4
@@ -99,18 +99,18 @@ menu:
   Categories: /categories
   Tags: /tags
   LICENSE: /license
-  Github: https://github.com/HanyuuLu
+  Github: https://github.com/Ilucia
 
 # Social media URL
 # Try to sort by changing the order of the keys
 sns:
   # `email` will fallback to `profile.email` if not specified
-  email: HanyuuFurude@outlook.com
+  email: ilucia_niu@163.com
   # If you use hexo-generator-feed, `sns.feed` can be left blank
   # and the theme will try to get `hexo.config.feed.path`.
   feed:
-  github: https://github.com/HanyuuLu
-  twitter: https://twitter.com/LuHanyuu
+  github: https://github.com/Ilucia
+  twitter: 
   facebook:
   instagram:
   tumblr:
@@ -128,7 +128,7 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy; 2020 <a href="">HanyuuLu</a> CC BY 4.0'
+  copyright: '&copy; 2020 <a href="">Ilucia</a> CC BY 4.0'
 
   # Set to false to hide Hexo link.
   powered: false
