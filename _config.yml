@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: HanyuuLu's page
+title: Ilucia's page
 subtitle:
-description: Hanyuu's personal page
+description: Ilucia's personal page (supported by HanyuuLu)
 keywords:
-author: Hanyuu Lu
+author: Ilucia Niu
 language: zh-cn
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: hanyuulu.github.io
+url: ilucia.github.io
 root: /
 permalink: :title/
 permalink_defaults:
