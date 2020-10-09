@@ -80,7 +80,7 @@ theme: inside
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:HanyuuLu/HanyuuLu.github.io.git
+  repository: git@github.com:Ilucia/ilucia.github.io.git
   branch: master
 
 markdown_it_plus:
