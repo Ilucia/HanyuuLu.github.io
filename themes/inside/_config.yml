@@ -33,7 +33,7 @@ appearance:
     # Base font which applied to body
     base: "'Microsoft YaHei','Josefin Sans', 'PingFang SC'"
     # Sidebar author font, fallback to `base`
-    logo: https://avatars3.githubusercontent.com/u/24761242?s=460&v=4
+    logo: https://avatars2.githubusercontent.com/u/49943452?s=460&v=4
     # Sidebar menu font, fallback to `base`
     menu: "Baloo Bhaijaan"
     # Font for:
